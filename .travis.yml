@@ -1,0 +1,22 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+
+sudo: false
+
+before_install:
+  - composer self-update
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source
+
+script:
+  - xmllint --noout --schema schema/config.xsd tests/_files/config.xml
+  - xmllint --noout --schema schema/menu.xsd tests/_files/menu.xml
+  - xmllint --noout --schema schema/plugin.xsd tests/_files/plugin.xml
+  - ./vendor/bin/phpunit --debug
+
+notifications:
+  email: false

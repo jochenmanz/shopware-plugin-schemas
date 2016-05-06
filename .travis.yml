@@ -6,11 +6,8 @@ php:
 
 sudo: false
 
-before_install:
-  - composer self-update
-
 install:
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
   - xmllint --noout --schema schema/config.xsd tests/_files/config.xml

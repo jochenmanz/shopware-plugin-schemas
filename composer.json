@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Shopware\\PluginConfig\\": "src"
+            "Shopware\\Components\\Plugin\\": "src"
         }
     },
     "require-dev": {

@@ -6,8 +6,8 @@ This repository contains XSD Schemas, example XML files and simple PHP readers f
 
 ## Directories
 
-* Schemas `./schema/`
-* Examples `tests/_files/`
+* Schemas `src/schema/`
+* Examples `examples/`
 
 ## Installation
 
